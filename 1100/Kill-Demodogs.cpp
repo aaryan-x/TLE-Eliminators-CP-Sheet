@@ -12,6 +12,11 @@ void fast(){
 void solve(){
     ll n;
     cin >> n;
+    // ll ans1 = ((((n*(n+1))%mod) * (2*n + 1))%mod * 337)%mod;
+    // ll ans2 = ((((n*(n-1))%mod) * (2*n-1))%mod * 337)%mod; 
+    // ll ans3 = ((((n*(n-1))%mod) * (3))%mod * 337)%mod;
+    // ll ans = ans1 + ans2 + ans3;
+    // ans %= mod;
     ll ans = ((((n*(n+1))%mod) * (4*n-1))%mod * 337)%mod;
     cout << ans << endl;
 }
