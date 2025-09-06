@@ -11,10 +11,12 @@ void fast() {
 void solve() {
     ll n;
     cin >> n;
-    if (n && !(n & (n - 1))) {
-        cout << "NO" << endl;
+    
+    // Check if n is a power of 2, since all odd numbers are their odd divisors and only powers of two doesn't have any odd divisor
+    if ((n & (n - 1)) == 0) {
+        cout << "NO" << endl;  // only divisors are powers of 2
     } else {
-        cout << "YES" << endl;
+        cout << "YES" << endl; // has an odd divisor > 1
     }
 }
 
