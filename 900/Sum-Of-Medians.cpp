@@ -17,13 +17,13 @@ void solve() {
     }
 
     long long sum = 0;
-    int idx = n*k - (n/2) - 1; // We jump to the last median and then iterate back, since the rest of elements in the start would not contribute to ans
+    int idx = n*k; // pointer to the last index + 1.
 
-    for (int i = 0; i < k; i++) {
+    while(k--){
+        idx -= (n/2 + 1); // moving to all the contributing medians;
         sum += arr[idx];
-        idx -= (n/2) + 1; // jump back to the next median
     }
-
+    
     cout << sum << "\n";
 }
 
