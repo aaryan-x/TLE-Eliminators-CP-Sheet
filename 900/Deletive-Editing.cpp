@@ -27,15 +27,12 @@ void solve(){
     string res;
     for(char c: s){
         int idx = c-'A';
-        if(drop[idx] > 0){
-            drop[idx]--;
-        }else{
-            res.push_back(c);
-        }
+        if(drop[idx] > 0)    drop[idx]--;
+        else    res.push_back(c);
     }
     
     if(res == t)    cout<<"YES"<<endl;
-        else    cout<<"NO"<<endl;
+    else    cout<<"NO"<<endl;
     
 }
 
