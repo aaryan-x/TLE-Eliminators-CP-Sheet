@@ -18,7 +18,6 @@ void solve() {
         visits.push_back({visit, i});
     }
 
-    // Sort by number of visits (desc), then by index (asc if tie)
     sort(visits.begin(), visits.end(), greater<pair<ll,ll>>());
 
     vector<ll> arr(n + 1, 0);  // arr[i] = coordinate of index i
